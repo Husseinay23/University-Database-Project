@@ -1,4 +1,4 @@
-<img width="468" height="132" alt="image" src="https://github.com/user-attachments/assets/fe9e746a-305f-4a01-af23-0e15bba84dcf" /># 🎓 University Database Project
+ 🎓 University Database Project
 
 This project is a relational database design and implementation for a university management system. It includes SQL scripts to create, populate, and query the database.
 
@@ -7,11 +7,11 @@ This project is a relational database design and implementation for a university
 The South Lebanon Relief Project aims to address the pressing needs of displaced families by developing a comprehensive Database Management System (DBMS). This report details the project's inspiration, design, and schema. The DBMS encompasses entities such as donors, goods, warehouses, staff, transactions, vendors, equipment, families, and family members. The system is designed to streamline resource distribution, ensure data security, and support efficient management of donations and aid. By leveraging robust database principles and relationships, the project seeks to enhance the operational efficiency and responsiveness of relief efforts in conflict-affected areas.
 
 
-##Entities and Relationships
+## Entities and Relationships
 
 The DBMS encompasses six pivotal entities, each fulfilling a vital role in supporting refugees:
 
-###1. Donors:
+### 1. Donors:
    - DID (primary key): Donor ID number.
    - Name
    - Contact Information:
@@ -31,7 +31,7 @@ The DBMS encompasses six pivotal entities, each fulfilling a vital role in suppo
      - Donation Type: Goods (Clothing, Food), Monetary
      - DID (primary key): An identifier to uniquely track each donor's contributions in the system (e.g., 1001).
 
-###2. Goods:
+### 2. Goods:
    -GID (primary key)
    -DID (Foreign key)
    - Description: Brief details or name of the donated goods.
@@ -52,14 +52,15 @@ The DBMS encompasses six pivotal entities, each fulfilling a vital role in suppo
      - DID: Foreign key referencing the donor associated with the goods.
 
 
-###3. Warehouse:
-       - Name
-       - Location
+### 3. Warehouse:
+   - Name
+    - Location
       -  WID (primary key): Warehouse ID
       -  SID: Staff ID
       -  VID: Vendor ID
       -  GID: Good ID
       -  DID: Donor ID
+      
    - Storage Areas:
      - Sections: Different areas within the warehouse for organizing goods (e.g., refrigerated section, dry section).
    - Capacity: The total storage capacity of the warehouse and the remaining space.
@@ -81,7 +82,7 @@ The DBMS encompasses six pivotal entities, each fulfilling a vital role in suppo
      - WID: An identifier to uniquely identify each warehouse (e.g., 3001).
 
 
-###4. Staff:
+### 4. Staff:
    - SID (primay key): Staff ID
    - Name
    - Role: Job title or position within the organization.
@@ -96,7 +97,7 @@ The DBMS encompasses six pivotal entities, each fulfilling a vital role in suppo
      - SID (primary key): An identifier to uniquely identify each staff member (e.g., 4001).
 
 
-###5. Transactions:
+### 5. Transactions:
    - TID (primay key): Transaction ID
    - GID : Goods ID
    - VID: Vendor ID
@@ -113,7 +114,7 @@ The DBMS encompasses six pivotal entities, each fulfilling a vital role in suppo
      - GID: Foreign key referencing the goods involved in the transaction.
      - VID: Foreign key referencing the vendor associated with the transaction.
 
-###6. Vendor:
+### 6. Vendor:
    - VID (primay key): Vendor ID
    - Name
    - Phone number: Contact number for the vendor.
@@ -123,19 +124,19 @@ The DBMS encompasses six pivotal entities, each fulfilling a vital role in suppo
      - Phone number: +1234567890
      - VID (primary key): An identifier to uniquely identify each vendor (e.g., 6001).
 
-###7. Equipment:
+### 7. Equipment:
 - EID (Equipment ID): (Primary key) Unique identifier for each piece of equipment in the database.
 - Quantity: Quantity of the equipment available.
 - Last_Maintained: Date and time when the equipment was last maintained.
 - Type: Type or category of the equipment.
 
-###8. Uses:
+### 8. Uses:
 - SID (Staff ID): Foreign key referencing the primary key in the Staff table, indicating the staff member using the equipment.
 - EID (Equipment ID): Foreign key referencing the primary key in the Equipment table, indicating the equipment being used.
 - Start_time: Date and time when the equipment usage started.
 - End_Time: Date and time when the equipment usage ended.
 
-###9. Families:
+### 9. Families:
 
 - FID (Family ID): (Primary key) Unique identifier for each family in the database.
 - Health_info: Information about the health status and medical needs of family members.
@@ -149,7 +150,7 @@ The DBMS encompasses six pivotal entities, each fulfilling a vital role in suppo
 - Special_needs: Any special needs or requirements of family members.
 
 
-###10. Family_Members:
+### 10. Family_Members:
 
 - MID (Member ID): (Primary key) Unique identifier for each family member in the database.
 - FID (Family ID): Foreign key referencing the primary key in the Families table, indicating the family to which the member belongs.
@@ -158,11 +159,6 @@ The DBMS encompasses six pivotal entities, each fulfilling a vital role in suppo
 - Gender: Gender of the family member.
 - Health_need: Any specific health needs or conditions of the family member.
 
-
- 
-<img width="468" height="640" alt="image" src="https://github.com/user-attachments/assets/ee4d12e0-14c7-4f12-aa35-58057e5c6e89" />
-
-
 ## 📁 Project Structure
  ```
 University-Database-Project/
@@ -170,7 +166,6 @@ University-Database-Project/
 ├── insert_data.sql # SQL script to populate the database with sample data
 ├── queries.sql # SQL script containing various example queries
  ```
-
 
 ## 🛠️ Technologies Used
 
